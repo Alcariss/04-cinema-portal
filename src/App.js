@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import {Menu} from 'semantic-ui-react';
 import MovieList from './MovieList';
+import Checkout from './Checkout';
 import './App.css';
 
 class App extends Component {
@@ -34,11 +35,12 @@ class App extends Component {
               children={this.getMenuItem('/', 'BIO EAR cinema', true)}
             />
             <Route
-              path='/basket'
+              path='/checkout'
               children={this.getMenuItem('/checkout', 'Checkout')}
             />
           </Menu>
-          <Route exact path="/" component={MovieList}/>
+          <Route exact path='/' component={MovieList}/>
+          <Route path='/checkout' component={Checkout} />
         </div>
       </Router>
     );
