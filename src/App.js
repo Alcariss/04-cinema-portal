@@ -7,6 +7,7 @@ import {
 import {Menu} from 'semantic-ui-react';
 import MovieList from './MovieList';
 import Checkout from './Checkout';
+import PurchasePage from './PurchasePage';
 import './App.css';
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
           </Menu>
           <Route exact path='/' component={MovieList}/>
           <Route path='/checkout' component={Checkout} />
+          <Route path='/movie/:id/buy' component={PurchasePage} />
         </div>
       </Router>
     );

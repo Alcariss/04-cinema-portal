@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { withRouter } from 'react-router';
 import { Item, Label } from 'semantic-ui-react';
-import BuyButton from './buttons/BuyButton';
+import BuyTicketsButton from './buttons/BuyTicketsButton';
 
 const MovieItem = (props) => {
   const handleBuyClick = () => {
@@ -21,7 +21,7 @@ const MovieItem = (props) => {
         <Item.Extra>
           <Label>IMAX</Label>
           <Label icon='globe' content='Additional Languages' />
-          <BuyButton onClick={handleBuyClick} />
+          <BuyTicketsButton onClick={handleBuyClick} />
         </Item.Extra>
       </Item.Content>
     </Item>

@@ -16,7 +16,7 @@ const getAll = (callback) => {
     let orders = [];
 
     try {
-      orders = JSON.parse(data);
+      orders = JSON.parse(data) || [];
     } catch (e) {
       return callback(e);
     }

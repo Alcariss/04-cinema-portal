@@ -1,13 +1,22 @@
-import React from 'react';
-import { Button, Icon } from 'semantic-ui-react';
+import React, { PropTypes } from 'react';
+import {
+  Button,
+  Icon
+} from 'semantic-ui-react';
 
 const BuyButton = (props) => {
   return (
-    <Button primary floated='right' onClick={props.onClick}>
-      Buy tickets
-      <Icon name='right chevron' />
+    <Button animated='vertical' onClick={props.onClick}>
+      <Button.Content hidden>Buy</Button.Content>
+      <Button.Content visible>
+        <Icon name='shop'/>
+      </Button.Content>
     </Button>
   );
+};
+
+BuyButton.propTypes = {
+  onClick: PropTypes.func.isRequired
 };
 
 export default BuyButton;

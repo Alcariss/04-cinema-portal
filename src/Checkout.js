@@ -4,13 +4,12 @@ import {
   Header,
   Segment,
   Divider,
-  Statistic,
-  Icon,
   Item
 } from 'semantic-ui-react';
 import PayButton from './buttons/PayButton';
 import Order from './Order';
 import OrdersService from './service/OrdersService';
+import Price from './utils/Price';
 
 class Checkout extends Component {
   constructor (props) {
@@ -46,6 +45,16 @@ class Checkout extends Component {
   }
 
   render() {
+    /*
+     * TODO
+     * Get real orders from OrdersService when component is shown from OrdersService:
+     *
+     * OrdersService.getAll(callback);
+     *
+     * callback is then called with two arguments:
+     *  - error (loading may fail from time to time)
+     *  - array of orders
+     */
     const orders = [{id: 1}, {id: 2}].map(this.renderOrder);
 
     return (
@@ -59,13 +68,7 @@ class Checkout extends Component {
           </Item.Group>
           <Divider section/>
           <div style={{float: 'right'}}>
-              <Statistic>
-                <Statistic.Value>
-                  <Icon name='dollar'/>
-                  5
-                </Statistic.Value>
-                <Statistic.Label>Total amount</Statistic.Label>
-              </Statistic>
+            <Price price={NaN} label='Total amount' />
             <PayButton onClick={this.handlePay} />
           </div>
           <div style={{clear: 'both'}}></div>
