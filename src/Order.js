@@ -10,7 +10,7 @@ const Order = ({order}) => {
         <Item.Header as='a'>Movie title</Item.Header>
         <Item.Meta>Price: ###</Item.Meta>
         <Item.Extra>
-          Date: MM.DD.YYYY HH:ii
+          Date: DD. MM. YYYY HH:ii
         </Item.Extra>
       </Item.Content>
     </Item>
