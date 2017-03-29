@@ -42,7 +42,8 @@ class PurchasePage extends Component {
      const order = {
         movie: {
           id,
-          title
+          title,
+          image
         },
         price,
         date
