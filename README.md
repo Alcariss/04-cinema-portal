@@ -1,6 +1,8 @@
 # 04-cinema-portal
 Simple educational app for practising React.js fundamentals
 
+![Cinema app](/public/example.png)
+
 ## The goal
 
 Implement all TODOs in the code, so it's possible to buy tickets,
