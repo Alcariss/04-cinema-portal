@@ -19,7 +19,6 @@ class App extends Component {
             header={isHeader}
             as='div'
             active={Boolean(match)}
-            onClick={this.handleMenuItemClick}
           >{label}</Menu.Item></Link>
       );
     };
